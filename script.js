@@ -35,7 +35,7 @@ function toggleSidebar() {
 		};
 		// httpRequest.open('GET', 'http://fast-ocean-4567.herokuapp.com/api/notes?domain=' + domain, true);
 
-		httpRequest.open('GET', 'http://fast-ocean-4567.herokuapp.com/api/notes', true);
+		httpRequest.open('GET', '//fast-ocean-4567.herokuapp.com/api/notes', true);
 		httpRequest.send();
 
 		sidebar.style.cssText = "\
