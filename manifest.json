@@ -1,0 +1,23 @@
+{
+	"name": "WNDX-beta",
+	"manifest_version": 2,
+	"description": "Keep your notes organized with your webpages.",
+	"version": "0.2",
+	"background": {
+		"page": "background.html"
+	},
+	"content_security_policy": "script-src 'self' https://cdn.firebase.com https://*.firebaseio.com ; object-src 'self'",
+	"page_action": {
+		"default_icon": "icon.png",
+		"default_title": "WNDX-beta"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["script.js"]
+		}
+	],
+	"permissions": [
+		"tabs"
+	]
+}
