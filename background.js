@@ -10,7 +10,7 @@ chrome.tabs.onUpdated.addListener(function(tabID) {
 	console.log('The page action is visible on tab #' + tabID + 'that has just been updated');
 });
 
-chrome.pageAction.onClicked.addListener(function() {
+chrome.browserAction.onClicked.addListener(function() {
 	chrome.tabs.getSelected(null, function(tab) {
 		chrome.tabs.sendRequest(tab.id, {callFunction: "toggleSidebar"}, function(){});
 		console.log('Sidebar is displayed for' + tab);	
