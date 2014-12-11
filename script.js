@@ -17,25 +17,21 @@ function toggleSidebar() {
 		var domainName = document.domain;
 		var domain = domainName.replace('www.','');
 
-		console.log(document.domain);
+		// console.log(document.domain);
 
 		httpRequest = new XMLHttpRequest();
 		httpRequest.onreadystatechange = function(){
 			if (httpRequest.readyState == 4 && httpRequest.status == 200) {
 				var myArr = JSON.parse(httpRequest.responseText);
 				console.log(myArr);
-				sidebar.innerHTML = '';
-				for (var i = 0; i < myArr.length; i++){
-					if (myArr[i].domain==domain){
-						sidebar.innerHTML += myArr[i].description+'<br><br>';
-						console.log('yeah bitch!');
-					}
-				}
+				sidebar.innerHTML = myFunction(myArr);
 			}
 		};
-		// httpRequest.open('GET', 'http://fast-ocean-4567.herokuapp.com/api/notes?domain=' + domain, true);
 
-		httpRequest.open('GET', '//fast-ocean-4567.herokuapp.com/api/notes', true);
+		console.log(domain);
+		httpRequest.open('GET', '//fast-ocean-4567.herokuapp.com/api/notes?domain=' + domain, true);
+
+		// httpRequest.open('GET', '//fast-ocean-4567.herokuapp.com/api/notes', true);
 		httpRequest.send();
 
 		sidebar.style.cssText = "\
