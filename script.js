@@ -15,7 +15,7 @@ function toggleSidebar() {
 		sidebar.id = "wndx-sidebar";
 
 		var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'http://localhost:3000/wndx.html', true);
+		xhr.open('GET', '//fast-ocean-4567.herokuapp.com/wndx.html', true);
 
 		xhr.send();
 
@@ -27,7 +27,7 @@ function toggleSidebar() {
 				var head = document.getElementsByTagName('head').item(0);
 		    var script = document.createElement('script');
 		    script.setAttribute('type', 'text/javascript');
-		    script.setAttribute('src', 'http://localhost:3000/wndx.js');
+		    script.setAttribute('src', '//fast-ocean-4567.herokuapp.com/wndx.js');
 		    head.appendChild(script);
 
 				var link = document.createElement('link');
