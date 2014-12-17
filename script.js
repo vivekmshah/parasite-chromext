@@ -13,7 +13,7 @@ function toggleSidebar() {
 	else {
 		var sidebar = document.createElement('div');
 		sidebar.id = "wndx-main";
-		sidebar.innerHTML = "<iframe style ='position: fixed;right: 0;width: 100%;height: 100%;' src='//wndx-test.herokuapp.com/'>";
+		sidebar.innerHTML = "<iframe style ='position: fixed;right: 0;width: 100%;height: 100%;' src='//fast-ocean-4567.herokuapp.com/'>";
 		sidebar.style.cssText = "\
 			position:fixed!important;\
 			top:0px!important;\
