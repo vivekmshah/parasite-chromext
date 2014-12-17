@@ -25,11 +25,11 @@ function toggleSidebar() {
 		    var wndxInfo = document.getElementById('wndx-main');
 		    wndxInfo.innerHTML = this.responseText;
 
-			// var head = document.getElementsByTagName('head').item(0);
-		  //   var script = document.createElement('script');
-		  //   script.setAttribute('type', 'text/javascript');
-		  //   script.setAttribute('src', '//fast-ocean-4567.herokuapp.com/wndx.js');
-		  //   head.appendChild(script);
+			var head = document.getElementsByTagName('head').item(0);
+		    var script = document.createElement('script');
+		    script.setAttribute('type', 'text/javascript');
+		    script.setAttribute('src', '//fast-ocean-4567.herokuapp.com/wndx.js');
+		    head.appendChild(script);
 
 		    var style = document.createElement('link');
 		    style.setAttribute('type', 'text/css');
