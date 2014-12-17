@@ -11,8 +11,11 @@ function toggleSidebar() {
 	}
 
 	else {
+		
 		var sidebar = document.createElement('div');
 		sidebar.id = "wndx-sidebar";
+		document.body.appendChild(sidebar);
+		sidebarOpen = true;
 
 		var xhr = new XMLHttpRequest();
 		xhr.open('GET', '//fast-ocean-4567.herokuapp.com/wndx.html', true);
@@ -28,18 +31,16 @@ function toggleSidebar() {
 		    var script = document.createElement('script');
 		    script.setAttribute('type', 'text/javascript');
 		    script.setAttribute('src', '//fast-ocean-4567.herokuapp.com/wndx.js');
-		    head.appendChild(script);
+		    sidebar.appendChild(script);
 
 				var link = document.createElement('link');
 				link.rel = 'stylesheet';
 		    link.href = '//fonts.googleapis.com/css?family=Open+Sans';
 		    link.type = 'text/css';
-		    head.appendChild(link);
+		    sidebar.appendChild(link);
 
 		};
 
-		document.body.appendChild(sidebar);
-		sidebarOpen = true;
 
 	}
 }
