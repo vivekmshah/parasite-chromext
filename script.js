@@ -13,37 +13,45 @@ function toggleSidebar() {
 	else {
 		var sidebar = document.createElement('div');
 		sidebar.id = "wndx-main";
-		
-		var xhr = new XMLHttpRequest();
-		xhr.open('GET', '//fast-ocean-4567.herokuapp.com/', true);
+		sidebar.innerHTML = "<iframe style ='position: fixed;right: 0;width: 100%;height: 100%;' src='//fast-ocean-4567.herokuapp.com/'>";
+		sidebar.style.cssText = "\
+			position:fixed!important;\
+			top:0px!important;\
+			right:0px!important;\
+			width:auto!important;\
+			height:100%!important;\
+			z-index:999999!important;\
+		";		
+		// var xhr = new XMLHttpRequest();
+		// xhr.open('GET', '//fast-ocean-4567.herokuapp.com/', true);
 
-		xhr.send();
+		// xhr.send();
 
-		xhr.onreadystatechange = function() {
-		    if (this.readyState !== 4) return;
-		    if (this.status !== 200) return;
-		    var wndxInfo = document.getElementById('wndx-main');
-		    wndxInfo.innerHTML = this.responseText;
+		// xhr.onreadystatechange = function() {
+		//     if (this.readyState !== 4) return;
+		//     if (this.status !== 200) return;
+		//     var wndxInfo = document.getElementById('wndx-main');
+		//     wndxInfo.innerHTML = this.responseText;
 
-			var head = document.getElementsByTagName('head').item(0);
-		    var script = document.createElement('script');
-		    script.setAttribute('type', 'text/javascript');
-		    script.setAttribute('src', '//fast-ocean-4567.herokuapp.com/wndx.js');
-		    head.appendChild(script);
+		// 	var head = document.getElementsByTagName('head').item(0);
+		//     var script = document.createElement('script');
+		//     script.setAttribute('type', 'text/javascript');
+		//     script.setAttribute('src', '//fast-ocean-4567.herokuapp.com/wndx.js');
+		//     head.appendChild(script);
 
-		    var style = document.createElement('link');
-		    style.setAttribute('type', 'text/css');
-		    style.setAttribute('href', '//fast-ocean-4567.herokuapp.com/wndx.css');
-		    style.setAttribute('rel', 'stylesheet');
-		    head.appendChild(style);
+		//     var style = document.createElement('link');
+		//     style.setAttribute('type', 'text/css');
+		//     style.setAttribute('href', '//fast-ocean-4567.herokuapp.com/wndx.css');
+		//     style.setAttribute('rel', 'stylesheet');
+		//     head.appendChild(style);
 
-			};
+		// 	};
 
 		document.body.appendChild(sidebar);
 
+		mainOpen = true;
 
 		};
 
-		mainOpen = true;
 	}
 	
