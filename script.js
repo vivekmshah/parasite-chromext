@@ -29,6 +29,12 @@ function toggleSidebar() {
 		    var script = document.createElement('script');
 		    script.setAttribute('type', 'text/javascript');
 		    script.setAttribute('src', '//localhost:3000/wndx.js');
+		   	
+		   	var link = document.createElement('link');
+    		link.rel = 'stylesheet';
+    		link.href = '//fonts.googleapis.com/css?family=Open+Sans';
+    		link.type = 'text/css';
+    		head.appendChild(link);
 		    head.appendChild(script);
 		};
 
