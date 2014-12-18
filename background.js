@@ -1,8 +1,9 @@
 console.log('Starting bg process');
 
 chrome.tabs.getSelected(null, function(tab) {
-	chrome.pageAction.show(tab.id);
+	// chrome.pageAction.show(tab.id);
 	console.log('The page action is now visible on tab #' + (tab.index+1));
+		console.log(encodeURIComponent(tab.url));
 });
 
 chrome.tabs.onUpdated.addListener(function(tabID) {

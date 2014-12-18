@@ -1,5 +1,7 @@
 chrome.extension.onRequest.addListener(toggleSidebar);
 
+
+
 var mainOpen = false;
 
 function toggleSidebar() {
@@ -11,9 +13,12 @@ function toggleSidebar() {
 	}
 
 	else {
+		console.log(window.location.href);
+		var href = window.location.href;
 		var sidebar = document.createElement('div');
 		sidebar.id = "wndx-main";
-		sidebar.innerHTML = "<iframe style ='position: fixed;right: 0;width: 100%;height: 100%;' src='//fast-ocean-4567.herokuapp.com/'>";
+		
+		sidebar.innerHTML = "<iframe style ='position: fixed;right: 0;width: 100%;height: 100%;' src='//fast-ocean-4567.herokuapp.com/notes?domain="+href+"'>";
 		sidebar.style.cssText = "\
 			position:fixed!important;\
 			top:0px!important;\
