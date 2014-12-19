@@ -15,10 +15,15 @@ function toggleSidebar() {
 	else {
 		console.log(window.location.href);
 		var href = window.location.href;
+
+		var regex = /:\/\/(.[^/]+)/;
+		var domain = href.match(regex)[1]
+
 		var sidebar = document.createElement('div');
 		sidebar.id = "wndx-main";
+
+		sidebar.innerHTML = "<iframe style ='position: fixed;right: 0;width: 100%;height: 100%;' src='//fast-ocean-4567.herokuapp.com/notes?domain="+domain+"'>";
 		
-		sidebar.innerHTML = "<iframe style ='position: fixed;right: 0;width: 100%;height: 100%;' src='//fast-ocean-4567.herokuapp.com/notes?domain="+href+"'>";
 		sidebar.style.cssText = "\
 			position:fixed!important;\
 			top:0px!important;\
