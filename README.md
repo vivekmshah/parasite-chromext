@@ -1,3 +1,5 @@
+![enter image description here](https://raw.githubusercontent.com/vivekmshah/parasite-chromext/master/icon_128.png)
+
 Parasite (Google Chrome Extension)
 ==================================
 ### Sink your teeth in.
