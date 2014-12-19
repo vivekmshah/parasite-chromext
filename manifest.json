@@ -2,7 +2,7 @@
 	"name": "Parasite",
 	"manifest_version": 2,
 	"description": "Sink your teeth in.",
-	"version": "0.2",
+	"version": "0.5",
 	"background": {
 		"page": "background.html"
 	},
